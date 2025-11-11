@@ -1,25 +1,19 @@
-# oxygen_receiver.py (Run this on the receiving server using Python)
 import asyncio
 import websockets
 import json
 
-# =========================================================================
-# 🛑 IMPORTANT: CONFIGURE THESE SETTINGS
-# =========================================================================
-# Use the actual IP address of the machine running oxygen_sender.js
-SENDER_IP = '127.0.0.1' # Example: Replace with the Sender's IP
+SENDER_IP = '127.0.0.1' #Replace with the Senders IP
 PORT = 8080
 URI = f"ws://{SENDER_IP}:{PORT}"
 
 async def receive_oxygen_data():
-    """Connects to the JavaScript sender and processes incoming oxygen data."""
     print(f"Connecting to JavaScript Sender at {URI}...")
     
     try:
         # Establish the WebSocket connection
         # The 'async with' ensures the connection is closed cleanly when done
         async with websockets.connect(URI) as websocket:
-            print("✅ Connection established. Waiting for data...")
+            print("Connection established. Waiting for data...")
             
             # Loop forever, listening for incoming messages
             while True:
@@ -30,23 +24,23 @@ async def receive_oxygen_data():
                     # Parse the JSON string into a Python dictionary
                     oxygen_data = json.loads(json_string)
                     
-                    # --- Terminal Output ---
+                    #Terminal Output
                     print("\n--- RECEIVED OXYGEN DATA (Python) ---")
                     print(f"Time:     {oxygen_data.get('timestamp')}")
                     print(f"Level:    **{oxygen_data.get('oxygenLevel')}%**")
                     print(f"Status:   {oxygen_data.get('status')}")
                     print("-------------------------------------")
-                    # -----------------------
+                    
 
                 except json.JSONDecodeError:
                     print(f"Error decoding JSON: Received non-JSON data: {json_string}")
                 
     except ConnectionRefusedError:
-        print(f"❌ Connection Refused: Ensure the sender is running at {SENDER_IP}:{PORT} and firewall is open.")
+        print(f"Connection Refused: Ensure the sender is running at {SENDER_IP}:{PORT} and firewall is open.")
     except websockets.ConnectionClosedOK:
-        print("❌ Connection closed cleanly by the sender.")
+        print("Connection closed cleanly by the sender.")
     except Exception as e:
-        print(f"❌ An unexpected error occurred: {e}")
+        print(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
     # The websockets library requires the asyncio event loop to run

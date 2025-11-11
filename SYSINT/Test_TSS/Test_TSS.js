@@ -1,11 +1,10 @@
-// oxygen_sender.js (Run this on the sending machine using Node.js)
 import { WebSocketServer } from 'ws';
 
-// The port the sender will listen on for the receiver to connect to
+//the desired port that it will listen on
 const PORT = 8080; 
 const wss = new WebSocketServer({ port: PORT });
 
-console.log(`🚀 JavaScript Sender running on ws://0.0.0.0:${PORT}`);
+console.log(`TSS running on ws://0.0.0.0:${PORT}`);
 
 // Function to generate a random oxygen level
 function generateOxygenLevel() {
@@ -15,9 +14,9 @@ function generateOxygenLevel() {
 
 // Event handler for a receiving server connecting
 wss.on('connection', function connection(ws) {
-    console.log('✅ Python Receiver connected.');
+    console.log('Receiver connected.');
 
-    // Function to send data
+    // Function to send data...it creates an object with data that will then be turned to a JSON formatted string.
     const sendOxygenData = () => {
         const oxygenLevel = generateOxygenLevel();
         const data = {
@@ -27,7 +26,7 @@ wss.on('connection', function connection(ws) {
             status: oxygenLevel > 94 ? 'Normal' : 'Low'
         };
 
-        // Convert the JavaScript object to a **JSON string**
+        // Convert the JavaScript object to a JSON string
         const jsonString = JSON.stringify(data);
 
         // Send the JSON string to the connected receiver
@@ -37,13 +36,13 @@ wss.on('connection', function connection(ws) {
         }
     };
 
-    // Set an interval to send data every 2 seconds
+    //set an interval to send data every 2 seconds
     const interval = setInterval(sendOxygenData, 2000);
 
-    // Handle receiver closing the connection
+    //handle receiver closing the connection
     ws.on('close', () => {
-        console.log('❌ Receiver disconnected. Stopping data transmission.');
-        // Clear the interval when the client disconnects
+        console.log('Receiver disconnected. Stopping data transmission.');
+        //clear the interval when the client disconnects
         clearInterval(interval); 
     });
 
