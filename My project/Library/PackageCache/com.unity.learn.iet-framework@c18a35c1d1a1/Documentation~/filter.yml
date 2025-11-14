@@ -1,0 +1,11 @@
+apiRules:
+  - exclude:
+      uidRegex: SerializableCallback
+      type: Namespace
+  - exclude:
+      uidRegex: Tests$
+      type: Namespace
+  # This is an example dummy asset, not real API
+  - exclude:
+      uidRegex: TutorialCallbacks
+      type: Class

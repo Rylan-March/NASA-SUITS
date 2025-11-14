@@ -1,0 +1,57 @@
+{
+    "name": "Unity.XR.CompositionLayers",
+    "rootNamespace": "UnityEngine.XR.CompositionLayers",
+    "references": [
+        "Unity.XR.CoreUtils",
+        "Unity.XR.Management",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.HighDefinition.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+          "name": "com.unity.modules.unityanalytics",
+          "expression": "1.0.0",
+          "excludePlatforms": ["PS5"],
+          "define": "UNITY_ANALYTICS"
+        },
+        {
+            "name": "com.unity.modules.vr",
+            "expression": "1.0",
+            "define": "ENABLE_UNITY_VR"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "0.0",
+            "define": "UNITY_RENDER_PIPELINES_UNIVERSAL"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "17.0",
+            "define": "UNITY_RENDER_PIPELINES_UNIVERSAL_RENDERGRAPH"
+        },
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "0.0",
+            "define": "UNITY_RENDER_PIPELINES_HDRENDER"
+        },
+        {
+            "name": "com.unity.render-pipelines.core",
+            "expression": "0.0",
+            "define": "UNITY_RENDER_PIPELINES_CORE"
+        },
+        {
+            "name": "com.unity.xr.openxr",
+            "expression": "1.12.0-exp.1",
+            "define": "UNITY_XR_OPENXR_COMPLAYER"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Unity.XR.AndroidXROpenXR.Editor.Tests",
+    "rootNamespace": "",
+    "references": [
+        "Unity.XR.AndroidOpenXR.Editor",
+        "Unity.XR.AndroidOpenXR",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

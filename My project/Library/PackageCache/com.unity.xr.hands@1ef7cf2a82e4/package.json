@@ -1,0 +1,54 @@
+{
+  "name": "com.unity.xr.hands",
+  "displayName": "XR Hands",
+  "version": "1.7.0",
+  "unity": "2021.3",
+  "description": "Surfaces the cross-platform subsystem API for hand-tracking. Implementations of providers will be found in the package for that platform.",
+  "keywords": [
+    "xr",
+    "vr",
+    "virtual",
+    "reality",
+    "hand",
+    "tracking",
+    "hands",
+    "subsystem"
+  ],
+  "samples": [
+    {
+      "displayName": "Gestures",
+      "description": "Sample showing how to detect and debug hand gestures.",
+      "path": "Samples~/Gestures"
+    },
+    {
+      "displayName": "HandVisualizer",
+      "description": "Basic sample showing how to visualize hands.",
+      "path": "Samples~/HandVisualizer"
+    },
+    {
+      "displayName": "Hand Capture",
+      "description": "Sample for recording real-time hand data to create custom gestures.",
+      "path": "Samples~/HandCapture"
+    }
+  ],
+  "dependencies": {
+    "com.unity.inputsystem": "1.3.0",
+    "com.unity.modules.xr": "1.0.0",
+    "com.unity.xr.core-utils": "2.2.0",
+    "com.unity.xr.management": "4.0.1",
+    "com.unity.mathematics": "1.2.6"
+  },
+  "_upm": {
+    "changelog": "### Added\n\n- Added subsystem APIs and data types for configuring the behavior of `XRHandDevice`:\n    - Added `XRHandSubsystemConfiguration` and `XRHandSubsystem.UpdateHandsConfiguration` to enable subsystem configuration.\n    - Added `XRHandSubsystemConfiguration.XRHandDevicePoseSource` to enable configuration of the `XRHandDevice` pose data, allowing `XRHandDevice` to report OpenXR compliant poses for existing controls.\n- Added additional controls to the `XRHandDevice` for parity with the OpenXR Hand Interaction Profile.\n- Added **XR Hand Capture** feature for recording and replaying hand data. Refer to the [XR Hand Capture manual](xref:xrhands-xrhandcapture). Also added a new sample [Hand Capture](xref:xrhands-xrhandcapture-recording) for recording the hand data from XR devices.\n\n### Fixed\n\n- Deprecated `XRHandSkeletonDriver.m_HasRootTransform` in favor of `XRHandSkeletonDriver.hasRootTransform`.\n- Fixed missing Tracking State reference in the HandVisualizer and Input Action configuration in HandGestures sample scenes.\n- Fixed the Hand Tracking feature so that if you deinitialize the OpenXR Loader and re-initialize it while your app is running, `XRHandProviderUtility` no longer throws a `NullReferenceException`.\n- Fixed an issue with the build tooling where the native libraries were not getting correctly compiled with support for [16 KB page sizes](https://developer.android.com/guide/practices/page-sizes).\n- Updated Android XR hand meshes and hand rigs in order to address visual feedback.\n\n### Changed\n\n- Marked `XRHand.GetJoint(XRHandJointID id)` as `readonly`.\n- Made `XRHandJoint` serializable and its fields serialized.\n\n### Known Issues\n\n- **Hand Capture** sample scene: Quest Link is not currently supported.\n- **Gestures** sample scene: Exiting Play Mode will emit `ObjectDisposedException` errors and related error output."
+  },
+  "upmCi": {
+    "footprint": "2c17cd01189d3fe70981b2c45fecfe0325c14b73"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.hands@1.7/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.xr.hands.git",
+    "type": "git",
+    "revision": "342b5cc3e28b6ad42805d0429f4a85d35277cfa1"
+  },
+  "_fingerprint": "1ef7cf2a82e4186324e66087095061a355ea6e93"
+}

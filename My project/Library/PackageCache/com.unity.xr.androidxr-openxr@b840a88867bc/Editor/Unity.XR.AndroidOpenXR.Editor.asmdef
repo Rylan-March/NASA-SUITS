@@ -1,0 +1,44 @@
+{
+    "name": "Unity.XR.AndroidOpenXR.Editor",
+    "rootNamespace": "UnityEditor.XR.OpenXR.Features.Android",
+    "references": [
+        "Unity.AndroidBuildPipeline",
+        "Unity.Android.Gradle",
+        "Unity.Android.Types",
+        "Unity.XR.AndroidOpenXR",
+        "Unity.XR.OpenXR",
+        "Unity.XR.Management",
+        "Unity.XR.OpenXR.Editor",
+        "Unity.XR.CoreUtils.Editor",
+        "Unity.XR.Management.Editor",
+        "Unity.XR.Hands",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.1",
+            "define": "XR_HANDS_1_1_OR_NEWER"
+        },
+        {
+            "name": "Unity",
+            "expression": "6000.0.4",
+            "define": "UNITY_6000_0_4_OR_NEWER"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "7.0.0",
+            "define": "UNITY_RENDER_PIPELINES_UNIVERSAL"
+        }
+    ],
+    "noEngineReferences": false
+}

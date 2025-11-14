@@ -1,0 +1,41 @@
+{
+  "name": "com.unity.xr.meta-openxr",
+  "displayName": "Unity OpenXR Meta",
+  "version": "2.2.1",
+  "unity": "6000.0",
+  "description": "Enables you to build mixed reality apps for Meta Quest devices by implementing support for Meta's OpenXR extensions.",
+  "keywords": [
+    "xreditorsubsystem",
+    "openxr",
+    "meta",
+    "oculus",
+    "xr",
+    "vr",
+    "mr",
+    "virtual",
+    "reality",
+    "rift",
+    "quest",
+    "arfoundation"
+  ],
+  "dependencies": {
+    "com.unity.xr.openxr": "1.15.0",
+    "com.unity.xr.arfoundation": "6.2.0",
+    "com.unity.xr.compositionlayers": "2.1.0",
+    "com.unity.xr.management": "4.4.0",
+    "com.unity.xr.core-utils": "2.5.1"
+  },
+  "_upm": {
+    "changelog": "### Changed\n\n- Changed the minimum version of the XR Composition Layers dependency from 2.0.0 to 2.1.0, as 2.0.0 is no longer supported.\n\n### Fixed\n\n- Fixed a possible `NullReferenceException` when installing Unity OpenXR: Meta in a new project. ([MOXRB-151](https://issuetracker.unity3d.com/issues/installing-unity-openxr-meta-package-throws-nullreferenceexception-error))\n- Fixed the `MetaOpenXRPassthroughLayer` so that passthrough correctly displays when the app is resumed after being suspended for a system permission dialogue.\n- Fixed `MetaOpenXRPlaneSubsystem` so that it doesn't cause the app to unexpectedly quit if the subsystem is destroyed while hiding planes that don't match your chosen plane detection mode.\n- Fixed the MetaOpenXROcclusionSubsystem so that it destroys all native resources when stopped, reducing its resource consumption while not in use."
+  },
+  "upmCi": {
+    "footprint": "5c4e00081499c13f02a1e5702e0dddda1ab4f872"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.meta-openxr@2.2/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/xr.sdk.meta-openxr.git",
+    "type": "git",
+    "revision": "d9e3b7a18dd59aab29263e8fec51fb0185c9253c"
+  },
+  "_fingerprint": "3046716a2a6a467a3023320338a5aac70ec12f38"
+}

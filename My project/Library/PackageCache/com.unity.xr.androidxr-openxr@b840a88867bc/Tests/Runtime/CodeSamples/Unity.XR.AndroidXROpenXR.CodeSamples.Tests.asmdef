@@ -1,0 +1,29 @@
+{
+    "name": "Unity.XR.AndroidXROpenXR.CodeSamples.Tests",
+    "rootNamespace": "UnityEngine.XR.OpenXR.Features.Android.Tests",
+    "references": [
+        "UnityEngine.TestRunner",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.AndroidOpenXR",
+        "Unity.XR.CoreUtils",
+        "Unity.XR.Management",
+        "Unity.XR.OpenXR"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

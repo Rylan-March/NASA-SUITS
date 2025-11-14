@@ -1,0 +1,10 @@
+namespace UnityEngine.XR.OpenXR.Features.Meta.Tests
+{
+    internal enum XrSpaceLocationFlags : uint
+    {
+        XR_SPACE_LOCATION_ORIENTATION_VALID_BIT = 0x00000001,
+        XR_SPACE_LOCATION_POSITION_VALID_BIT = 0x00000002,
+        XR_SPACE_LOCATION_ORIENTATION_TRACKED_BIT = 0x00000004,
+        XR_SPACE_LOCATION_POSITION_TRACKED_BIT = 0x00000008
+    }
+}

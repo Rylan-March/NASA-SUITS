@@ -1,0 +1,35 @@
+{
+    "name": "Unity.XR.AndroidOpenXR",
+    "rootNamespace": "UnityEngine.XR.OpenXR.Features.Android",
+    "references": [
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.OpenXR",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem",
+        "Unity.XR.Management.Editor",
+        "Unity.XR.Management",
+        "Unity.XR.Hands"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "macOSStandalone",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.5.0-pre.2",
+            "define": "XR_HANDS_1_5_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

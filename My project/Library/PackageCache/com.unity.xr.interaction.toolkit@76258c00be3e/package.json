@@ -1,0 +1,84 @@
+{
+  "name": "com.unity.xr.interaction.toolkit",
+  "displayName": "XR Interaction Toolkit",
+  "version": "3.2.1",
+  "unity": "2021.3",
+  "description": "A high-level, component-based, interaction system for creating VR and AR experiences. It provides a framework that makes 3D and UI interactions available from Unity input events. The core of this system is a set of base Interactor and Interactable components, and an Interaction Manager that ties these two types of components together. It also contains components that you can use for locomotion and drawing visuals.",
+  "keywords": [
+    "XR",
+    "VR",
+    "toolkit",
+    "interaction"
+  ],
+  "category": "XR",
+  "dependencies": {
+    "com.unity.inputsystem": "1.8.1",
+    "com.unity.mathematics": "1.2.6",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.xr.core-utils": "2.4.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.xr": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Starter Assets",
+      "description": "Assets to streamline setup of behaviors, including a default set of input actions and presets for use with XR Interaction Toolkit behaviors that use the Input System. Also contains a demo scene.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.shadergraph\">Shader Graph</a>",
+      "path": "Samples~/Starter Assets"
+    },
+    {
+      "displayName": "Hands Interaction Demo",
+      "description": "Demo scene and other assets for hand-tracking integration with the XR Interaction Toolkit.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.xr.hands\">XR Hands</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.shadergraph\">Shader Graph</a>\n • Starter Assets sample",
+      "path": "Samples~/Hands Interaction Demo"
+    },
+    {
+      "displayName": "AR Starter Assets",
+      "description": "Assets to streamline setup when building for Mobile AR or Mixed Reality with the XR Interaction Toolkit. This includes prefabs and a demo scene to get you started.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.xr.arfoundation\">AR Foundation</a>\n • Starter Assets sample",
+      "path": "Samples~/AR Starter Assets"
+    },
+    {
+      "displayName": "XR Interaction Simulator",
+      "description": "Assets related to the simulation of XR HMD, controllers and interaction.",
+      "path": "Samples~/XR Interaction Simulator"
+    },
+    {
+      "displayName": "XR Device Simulator",
+      "description": "(Legacy) Assets related to the simulation of XR HMD and controllers.",
+      "path": "Samples~/XR Device Simulator"
+    },
+    {
+      "displayName": "Spatial Keyboard",
+      "description": "Virtual spatial keyboard to allow for text entry in a world space UI. This interactable keyboard can be used in your app instead of the platform's system keyboard.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.textmeshpro\">TextMeshPro</a>\n • Starter Assets sample",
+      "path": "Samples~/Spatial Keyboard"
+    },
+    {
+      "displayName": "World Space UI",
+      "description": "This sample provides a demo scene and prefabs demonstrating how to leverage UI Toolkit and UGUI in world space in conjunction with the XR Interaction Toolkit. \n<i>Dependencies:</i>\n • Starter Assets sample\n • Hands Interaction Demo sample\n • Unity 6.2 or newer (minimum 6000.2.0a9)",
+      "path": "Samples~/World Space UI"
+    },
+    {
+      "displayName": "Legacy XR Input Readers",
+      "description": "This sample provides ScriptableObjects to assist with migration from the older device-based controller input to be used with the new input readers introduced with version 3.0.0.",
+      "path": "Samples~/Legacy XR Input Readers"
+    },
+    {
+      "displayName": "visionOS",
+      "description": "This sample provides a demo scene and prefabs designed to to help you get started developing on visionOS with the XR Interaction Toolkit.\n<i>Dependencies:</i>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.xr.arfoundation\">AR Foundation</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.polyspatial.visionos\">PolySpatial visionOS</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.polyspatial.xr\">PolySpatial XR</a>\n • <a href=\"com.unity3d.kharma:upmpackage/com.unity.shadergraph\">Shader Graph</a>\n • Starter Assets sample\n • Unity 2022.3 LTS or newer (minimum 2022.3.19f1)",
+      "path": "Samples~/visionOS"
+    }
+  ],
+  "_upm": {
+    "changelog": "### Added\n- Added re-validation for the `InputPanelConfiguration` for UI Toolkit support.\n- Added two new prefabs to the Hands Interaction Demo sample for Android XR, based on the `LeftHandAndroidXR` and `RightHandAndroidXR` models that ship as a part of the XR Hands package HandVisualizer sample.\n- Added `PermissionManager` and `PlatformUnderstanding` sample scripts and prefab to help request permissions required for specific OpenXR platforms.\n\n### Changed\n- Changed the minimum version of the XR Hands package required from `1.2.1` to `1.5.1` as well as updated the recommended version to `1.6.1`.\n- Changed the `PinchPointFollow` script in the Hands Interaction Demo sample by making the `OnJointsUpdated` method `public` so that it can be invoked directly by the Joints Updated event in the `XRHandTrackingEvents` component, depending on which hand mesh visuals are active, Quest or Android XR.\n- Changed the `XR Origin Hands (XR Rig)` prefab in the Hands Interaction Demo sample to include the newly added Android XR hand visualizer prefabs. The existing `LeftHandInteractionVisual`/`RightHandInteractionVisual` prefabs were renamed to `LeftHandQuestVisual`/`RightHandQuestVisual` and new `LeftHandAndroidXRVisual`/`RightHandAndroidXRVisual` prefabs were added.\n\n### Fixed\n- Fixed premature `InputPanelConfiguration` warning logged in `UIToolkitHandler` when validation check happened before `InputPanelConfiguration` is set.\n- Fixed an issue with `TryGetCurveEndPoint` in the `NearFarInteractor`, where Snap Volumes are not checked against the list of valid targets, which may be different when using Target Filters.\n- Fixed an issue with `NearFarInteractor` where it would ignore the `canProcess` property on an `IXRTargetFilter`, allowing it to always process the filter.\n- Fixed warnings about use of deprecated `TreeView` classes in debugger window in Unity 6.2.\n- Fixed a regression caused by the addition of the Gravity Provider, where if the component is present, but gravity is disabled, the `inAirVelocityModifier` is applied. This causes issues in scenes where there is no ground or gravity, but locomotion should be applied normally otherwise.\n- Fixed missing Target Priority Mode and Starting Selected Interactable properties in the Near-Far Interactor Inspector window.\n- Fixed `Assertion failed on expression: t.GetParent() == nullptr` when exiting Play mode in some additional cases with the XR Grab Interactable. It no longer sets the parent when exiting Play mode.\n- Fixed so the deprecated AR interactor and interactable components appears in the Add Component menu again and files renamed from `.deprecated.cs` so that they can be added to GameObjects. They can be found under **Component** &gt; **XR** &gt; **AR** &gt; **Deprecated**.\n- Fixed handling of focus with nested XR Interaction Groups so that parent groups are also notified when member groups have an interactor that triggers focus. The `XRInteractionManager` now recursively calls `IXRInteractionGroup.OnFocusEntering` on all parent groups of the focus group, thereby setting `IXRInteractionGroup.focusInteractor` and `IXRInteractionGroup.focusInteractable`.\n- Fixed so only the focus interactor being unregistered causes a focus exit event rather than any member interactor of the XR Interaction Group being unregistered."
+  },
+  "upmCi": {
+    "footprint": "bac6c7144923ac72028fc14c69fd938e3994073c"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.2/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git",
+    "type": "git",
+    "revision": "76ea9b3d9ff76136ef0dd9a2c8f28e08b89155fe"
+  },
+  "_fingerprint": "76258c00be3ea4eb64bfddff79870b92092a74c7"
+}

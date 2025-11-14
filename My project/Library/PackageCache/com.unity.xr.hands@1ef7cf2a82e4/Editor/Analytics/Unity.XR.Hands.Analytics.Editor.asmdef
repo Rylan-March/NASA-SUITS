@@ -1,0 +1,19 @@
+{
+    "name": "Unity.XR.Hands.Analytics.Editor",
+    "rootNamespace": "UnityEditor.XR.Hands.Analytics",
+    "references": [
+        "Unity.XR.CoreUtils.Editor",
+        "Unity.XR.Hands"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

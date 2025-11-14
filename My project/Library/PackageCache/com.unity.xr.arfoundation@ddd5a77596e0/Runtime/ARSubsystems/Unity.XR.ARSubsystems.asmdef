@@ -1,0 +1,23 @@
+{
+    "name": "Unity.XR.ARSubsystems",
+    "rootNamespace": "UnityEngine.XR.ARSubsystems",
+    "references": [
+        "Unity.InputSystem",
+        "Unity.XR.CoreUtils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "UNITY_INPUT_SYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

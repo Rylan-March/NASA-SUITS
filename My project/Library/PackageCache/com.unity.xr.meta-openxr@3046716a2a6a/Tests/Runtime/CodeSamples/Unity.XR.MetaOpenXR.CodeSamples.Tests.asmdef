@@ -1,0 +1,29 @@
+{
+    "name": "Unity.XR.MetaOpenXR.CodeSamples.Tests",
+    "rootNamespace": "UnityEngine.XR.OpenXR.Features.Meta.Tests",
+    "references": [
+        "Unity.XR.ARFoundation",
+        "Unity.XR.MetaOpenXR",
+        "UnityEngine.TestRunner",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.Management",
+        "Unity.XR.OpenXR",
+        "Unity.XR.CoreUtils"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

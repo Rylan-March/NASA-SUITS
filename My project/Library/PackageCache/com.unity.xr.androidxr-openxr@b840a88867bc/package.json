@@ -1,0 +1,38 @@
+{
+  "name": "com.unity.xr.androidxr-openxr",
+  "displayName": "Unity OpenXR Android XR",
+  "version": "1.0.2",
+  "unity": "6000.0",
+  "unityRelease": "23f1",
+  "description": "Enables you to build mixed reality apps for Android XR devices by implementing support for Android XR extensions.",
+  "keywords": [
+    "openxr",
+    "google",
+    "android",
+    "xr",
+    "vr",
+    "mr",
+    "mixed",
+    "reality",
+    "virtual",
+    "arfoundation"
+  ],
+  "dependencies": {
+    "com.unity.xr.openxr": "1.15.1",
+    "com.unity.xr.arfoundation": "6.2.0",
+    "com.unity.xr.hands": "1.6.0"
+  },
+  "_upm": {
+    "changelog": "### Added\n- Added support for [16 KB page sizes](https://developer.android.com/guide/practices/page-sizes) in the native plugin on Android 15 or newer.\n\n### Fixed\n- Fixed the trailing space issue with \"android.hardware.xr.input.controller \" in AndroidManifest"
+  },
+  "upmCi": {
+    "footprint": "53a0a42ad3362dfe90457c641843f8eff8be691a"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.androidxr-openxr@1.0/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/xr.sdk.androidxr-openxr.git",
+    "type": "git",
+    "revision": "0fcc33ec2056d6b6bed91242ca849586cabb5317"
+  },
+  "_fingerprint": "b840a88867bcffd2805c3269783b42be8c95e173"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Unity.XR.Hands.Tests",
+    "references": [
+        "Unity.XR.Hands",
+        "Unity.InputSystem"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ]
+}
