@@ -1,0 +1,11 @@
+before interacting with the python scripts:
+please run:
+
+(python or python3 can be used interchangably)
+
+python3 -m venv venv
+source venv/bin/activate (or equivalent)
+pip install -r piprequirements.txt
+
+then run python3 ________.py to activate any of the Python scripts
+
