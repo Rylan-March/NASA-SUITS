@@ -1,11 +1,43 @@
-before interacting with the python scripts:
+- before interacting with the python scripts:
 please run:
 
-(python or python3 can be used interchangably)
+*** (python or python3 can be used interchangably)
 
 python3 -m venv venv
 source venv/bin/activate (or equivalent)
 pip install -r piprequirements.txt
 
-then run python3 ________.py to activate any of the Python scripts
+- then run python3 ________.py to activate any of the Python scripts (in most cases just use run.py)
 
+*** remember to remove any venv directories or subdirectories
+
+Docker Instructions:
+
+\\\
+Please remember to change the SENDER IP to the host TSS for example in my git diff
+in this case my send ip was:
+
+-SENDER_IP = '127.0.0.1'   # WebSocket source (your JS program)
++SENDER_IP = '192.168.0.55'   # WebSocket source (your JS program)
+\\\
+
+
+- run the node TSS first on the host
+
+then run:
+sudo docker build -t sysintns:v.4 .
+sudo docker run  --name sysint -p 5555:5555 sysintns:v.4
+
+while container is running to see logs:
+sudo docker exec -it sysint /bin/sh
+tail -f oxygen_log.txt
+
+To stop the container:
+sudo docker stop sysint
+
+after container stops if you want to use existing container:
+sudo docker start sysint
+
+to wipe everything:
+
+sudo docker system prune -a

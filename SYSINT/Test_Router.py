@@ -3,7 +3,7 @@ import websockets
 import json
 import zmq
 
-SENDER_IP = '127.0.0.1'   # WebSocket source (your JS program)
+SENDER_IP = '192.168.0.55'   # WebSocket source (your JS program)
 PORT = 8080
 URI = f"ws://{SENDER_IP}:{PORT}"
 
